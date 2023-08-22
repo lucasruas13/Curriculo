@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html, body{
+    font-family: Ubuntu, Arial;
+    width: 100%;
+    height: 100%;
+}
+
+#header /*cabeçalho lateral*/{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #101a36;
+    overflow-y: auto;
+    width: 300px;
+    transition: all ease-in-out 0.5s;
+    padding: 0 15px;
+    z-index: 9997;
+}
+
+#header .profile img /*imagem cabeçalho*/{
+    margin: 15px auto;
+    display: block;
+    width: 120px;
+    border: 5px solid #2a2e3f;
+    border-radius: 50%;
+}
+
+#header .profile h1 /*nome cabeçalho*/{
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+
+#header .profile .social-links a /*icons social-links cabeçalho*/{
+    font-size: 1.2rem;
+    background: #2a2e3f;
+    color: #fff;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+#header .profile .social-links a:hover /*backgroung social-links cabeçalho*/{
+    background: #0c6cfc;
+}
+
+.nav-menu /*posição itens cabeçalho*/{
+    padding: 1.5rem;
+}
+
+.nav-menu a,
+.nav-menu a:focus /*itens cabeçalho*/{
+    display: flex;
+    align-items: center;
+    color: #929294;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.nav-menu a i,
+.nav-menu a:focus i /*icons itens cabeçalho*/{
+    font-size: 24px;
+    padding-right: 0.8rem;
+    color: #929294;
+}
+
+.nav-menu a:hover,
+.nav-menu .active,
+.nav-menu .active:focus,
+.nav-menu li:hover > a /*itens cabeçalho em foco*/{
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-menu a:hover i,
+.nav-menu .active i,
+.nav-menu .active:focus i,
+.nav-menu li:hover > a i /*icons itens cabeçalho em foco*/{
+    color: #0c6cfc;
+}
+
+#main /*página principal*/{
+    margin-left: 300px;
+}
+
+section#inicio /*imagem página principal*/{
+    background-image: url("./img/dev_wallpaper.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    filter: grayscale(50%);
+}
+
+section#inicio h2 /*subtitulo página principal*/{
+    font-size: 6rem;
+
+}
+
+section#inicio span#subtitle /*subtitulo página principal*/{
+    margin-right: 8rem;
+    font-size: 1.5rem;
+}
+
+.text-shadow /*sombras de texto padrão*/{
+    text-shadow: 4px 4px 10px #000;
+}
+
+section#inicio div#arraste /*botão arraste para mais*/{
+    width: 9rem;
+}
+
+section#inicio div#arraste a /*botão arraste para mais*/{
+    text-decoration: none;
+    color: #fff;
+}
+
+i.menu-mobile /*botão menu-mobile*/{
+    position: fixed;
+    color: #fff;
+    background-color: #101a36;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-nav-active {
+    overflow: hidden;
+}
+
+.menu-nav-active #header {
+    left: 0;
+}
+
+@media (max-width: 1024px) /*condição p/ o botão menu-mobile aparecer*/{
+    #header {
+        left: -300px;
+    }
+    i.menu-mobile {
+        display: flex;
+    }
+    section#inicio h2 {
+        font-size: 3.5rem;
+    }
+    section#inicio span#subtitle {
+        margin-right: 0;
+        font-size: 1rem;
+    }
+    #main {
+        margin-left: 0;
+    }
+}
+
+*::-webkit-scrollbar /*configuração scrollbar*/{
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track /*configuração scrollbar (background)*/{
+    width: 12px;
+    box-shadow: inset 0 0 .3rem #00000050;
+background-color: #fff;
+}
+
+*::-webkit-scrollbar-thumb /*configuração scrollbar (barra de rolagem)*/{
+    background-color: #101a36;
+}
+
+.section-bg /*background seção de habilidades*/{
+    background-color: #f4f4f4;
+}
+
+.cv .cv-title /*título da seção Currículo*/{
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #212431;
+}
+
+.cv .cv-item /*itens da seção Currículo*/{
+    padding: 0 0 20px 20px;
+    margin-top: -2px;
+    border-left: 2px solid #101a36;
+    position: relative;
+}
+
+.cv .cv-item h4 /*cargos da seção Currículo*/{
+    line-height: 18px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #212431;
+    margin-bottom: 10px;
+}
+
+.cv .cv-item h5 /*periodo da seção Currículo*/{
+    background: #c3d0f1;
+    padding: 5px 10px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.cv .cv-item::before /*bolinha de tópico da seção Currículo*/{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -9px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #101a36;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.carousel-control-prev /*seta de controle esq. do carrossel na seção Portfólio*/{
+    margin-left: -8rem;
+}
+
+.carousel-control-next /*seta de controle dir. do carrossel na seção Portfólio*/{
+    margin-right: -8rem;
+}
+
+.carousel-indicators /*indicadores do carrossel da seção Portfólio*/{
+    margin-bottom: -35px;
+}
+
+/* Animação */
+
+[data-anime] {
+    opacity: 0;
+    transition: 1s;
+}
+
+[data-anime="down"] {
+    transform: translate3d(0, -100%, 0);
+}
+
+[data-anime="up"] {
+    transform: translate3d(0, 100%, 0);
+}
+
+[data-anime="left"] {
+    transform: translate3d(-100%, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+@media (max-width: 1860px) /*condição p/ a margem não exceder o limite na responsividade*/{
+    .carousel-control-prev {
+        margin-left: 0;
+    }
+
+    .carousel-control-next {
+        margin-right: 0;
+    }
+
+    [data-anime="right"] {
+        transform: translate3d(-100px, 0, 0);
+    }
+}
+
+#btn-enviar-loader /*botão de carregamento para envio de mensagem*/{
+    display: none;
+}
+
+#alerta /*Configuração para a mensagem de alerta aparecer no topo direito da página*/{
+    position: fixed;
+    z-index: 10;
+    top: 30px;
+    right: 30px;
+}
+
+#footer /*Configuração footer (copyright)*/{
+    padding: 15px;
+    color: #fff;
+    font-size: 14px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 300px;
+    z-index: 9999;
+    background-color: #101a36;
+    transition: .3s;
+}
+
+@media (max-width: 1012px) /*condição p/ o footer aparecer com a responsividade*/{
+    #footer {
+        position: static;
+        width: auto;
+        padding: 20px 15px;
+    }
+}
